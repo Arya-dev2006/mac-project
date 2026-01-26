@@ -1,10 +1,12 @@
 import React from 'react'
+import Doc from './components/Doc'
+
 
 const App = () => {
   return (
-    <div>
-      <h1>hello</h1>
-    </div>
+    <main>
+      <Doc />
+    </main>
   )
 }
 
