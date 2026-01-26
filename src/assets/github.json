@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "E-Commerce Platform",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    "description": "A full-stack e-commerce platform with user authentication, product management, shopping cart, and payment integration.",
+    "techStack": ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+    "repo": "https://github.com/yourusername/ecommerce-platform",
+    "liveDemo": "https://ecommerce-demo.vercel.app"
+  },
+  {
+    "id": 2,
+    "name": "Task Management App",
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+    "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    "techStack": ["React", "Firebase", "Tailwind CSS", "React DnD"],
+    "repo": "https://github.com/yourusername/task-manager",
+    "liveDemo": "https://taskmanager-demo.netlify.app"
+  },
+  {
+    "id": 3,
+    "name": "Weather Dashboard",
+    "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&q=80",
+    "description": "A responsive weather dashboard that provides real-time weather information, forecasts, and interactive maps using external APIs.",
+    "techStack": ["React", "TypeScript", "OpenWeather API", "Chart.js"],
+    "repo": "https://github.com/yourusername/weather-dashboard",
+    "liveDemo": "https://weather-dashboard-demo.vercel.app"
+  },
+  {
+    "id": 4,
+    "name": "Social Media Clone",
+    "image": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+    "description": "A social media application with user profiles, post creation, likes, comments, and real-time notifications.",
+    "techStack": ["React", "Redux", "Node.js", "PostgreSQL", "Socket.io"],
+    "repo": "https://github.com/yourusername/social-media-clone",
+    "liveDemo": "https://social-clone-demo.herokuapp.com"
+  },
+  {
+    "id": 5,
+    "name": "Portfolio Website",
+    "image": "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&q=80",
+    "description": "A modern and responsive portfolio website showcasing projects, skills, and experience with smooth animations and dark mode.",
+    "techStack": ["React", "Next.js", "Framer Motion", "SCSS"],
+    "repo": "https://github.com/yourusername/portfolio",
+    "liveDemo": "https://portfolio-demo.vercel.app"
+  },
+  {
+    "id": 6,
+    "name": "Blog Platform",
+    "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+    "description": "A full-featured blog platform with markdown support, content management, SEO optimization, and comment system.",
+    "techStack": ["React", "Next.js", "Sanity CMS", "Tailwind CSS"],
+    "repo": "https://github.com/yourusername/blog-platform",
+    "liveDemo": "https://blog-demo.vercel.app"
+  }
+]
