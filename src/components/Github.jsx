@@ -4,10 +4,10 @@ import {Rnd} from 'react-rnd'
 import MacWindow from './Windows/MacWindow'
 import './Github.scss'
 
-const Github = () => {
+const Github = ({setWindowState,WindowName}) => {
     
   return (
-    <MacWindow>
+    <MacWindow setWindowState={setWindowState} WindowName={WindowName}>
     <div className="cards">
             {github.map((elem)=>{
                 return <div className="card">

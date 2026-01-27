@@ -3,7 +3,7 @@ import Terminal from 'react-console-emulator'
 import MacWindow from './Windows/MacWindow'
 import './Cli.scss'
 
-const Cli = () => {
+const Cli = ({setWindowState,WindowName}) => {
 const commands = {
   echo: {
     description: 'Echo a passed string.',
@@ -41,7 +41,7 @@ Type: about skills / education / contact
 }
 
   return (
-    <MacWindow>
+    <MacWindow setWindowState={setWindowState} WindowName={WindowName}>
         <div className="cli-window">
         <Terminal
         commands={commands}

@@ -5,7 +5,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import './Notes.scss'
 
-const Notes = () => {
+const Notes = ({setWindowState,WindowName}) => {
     const [markdown, setmarkdown] = useState('')
     
     async function GetData(){
@@ -19,7 +19,7 @@ const Notes = () => {
     },[])
 
   return (
-    <Macwidows>
+    <Macwidows setWindowState={setWindowState} WindowName={WindowName} >
         <div className="note-window">
           <SyntaxHighlighter language="typescript" style={atomOneDark}>
               {markdown}
