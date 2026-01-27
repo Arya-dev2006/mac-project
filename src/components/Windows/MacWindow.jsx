@@ -3,13 +3,13 @@ import { Rnd } from 'react-rnd'
 import './MacWindow.scss'
 import DateTime from '../DateTime'
 
-const MacWindow = (props) => {
+const MacWindow = ({children,width='80vh', height='50vh',left=300,bottom=50}) => {
   return (
     <Rnd  default={{
-       height:"80vh",
-       width:"50vw",
-       x:300,
-       y:50,
+       height:height,
+       width:width,
+       x:left,
+       y:bottom,
 
     }
      
@@ -29,7 +29,7 @@ const MacWindow = (props) => {
             </div>
         </div>
         <div className="content">
-           {props.children}
+           {children}
         </div>
         </div>
     </Rnd>
