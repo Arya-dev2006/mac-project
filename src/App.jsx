@@ -5,7 +5,7 @@ import MacWindow from './components/Windows/MacWindow'
 import Github from './components/Github'
 import Notes from './components/Notes'
 import Resume from './components/Resume'
-import Spotify from './components/Spotify.Jsx'
+import Spotify from './components/Spotify'
 import Cli from './components/Cli'
 
 
