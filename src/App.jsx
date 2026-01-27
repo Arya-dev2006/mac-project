@@ -6,6 +6,7 @@ import Github from './components/Github'
 import Notes from './components/Notes'
 import Resume from './components/Resume'
 import Spotify from './components/Spotify.Jsx'
+import Cli from './components/Cli'
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
        <Notes />
        <Resume />
        <Spotify />
+       <Cli />
     </main>
   )
 }

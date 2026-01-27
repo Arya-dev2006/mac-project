@@ -1,0 +1,13 @@
+.cli-window{
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 2rem;
+    background: linear-gradient(to bottom, rgb(230, 119, 119),rgb(237, 62, 62));
+
+    div[name="react-console-emulator"]{
+        background-color: transparent !important;
+    }
+    div[name="react-console-emulator__inputArea"]{
+        color: rgb(2, 65, 7) !important;
+    }
+}
