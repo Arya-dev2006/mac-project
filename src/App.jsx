@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Doc from './components/Doc'
 import Nav from './components/Nav'
-import MacWindow from './components/Windows/MacWindow'
 import Github from './components/Github'
 import Notes from './components/Notes'
 import Resume from './components/Resume'
