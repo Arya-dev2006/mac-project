@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { createContext } from 'react'
 import { useState } from 'react'
 
@@ -27,10 +28,27 @@ const ChangeThemeContext = (props) => {
     wallpaper: '/Themes/Batman.png',
     accent: '#30d158',
   },
+  {
+    name: 'Batman',
+    wallpaper: '/Themes/IronMan.png',
+    accent: '#30d158',
+  },
+  {
+    name: 'Batman',
+    wallpaper: '/Themes/SpiderMan.png',
+    accent: '#30d158',
+  },
+  {
+    name: 'Batman',
+    wallpaper: '/Themes/Goku.png',
+    accent: '#30d158',
+  },
 ]
 
 
-const [ChangeTheme, setChangeTheme] = useState(0)
+const [ChangeTheme, setChangeTheme] = useState(
+    Number(localStorage.getItem('ThemeIndex')) || 0
+)
 function NextTheme(){
     setChangeTheme((prev)=>{
         if(prev===themes.length-1){
@@ -40,7 +58,9 @@ function NextTheme(){
         }
     })
 }
-
+useEffect(()=>{
+    localStorage.setItem('ThemeIndex',ChangeTheme)
+  },[ChangeTheme])
 
   return (
     
