@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Doc from './components/Doc'
 import Nav from './components/Nav'
 import Github from './components/Github'

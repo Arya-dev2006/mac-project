@@ -45,6 +45,12 @@ const ChangeThemeContext = (props) => {
   },
 ]
 
+useEffect(()=>{
+    themes.forEach((elem) => {
+      const img = new Image;
+      img.src = elem.wallpaper
+    });
+  },[])
 
 const [ChangeTheme, setChangeTheme] = useState(
     Number(localStorage.getItem('ThemeIndex')) || 0
