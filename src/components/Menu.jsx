@@ -17,9 +17,18 @@ const Menu = ({setWindowState , refreshDesktop}) => {
             visible:false,
         }))
      }}>Change Theme</div>
-      <div className="menu-item">System Preferences</div>
+
       <div className="divider" />
-      <div className="menu-item">New Note</div>
+      <div className="menu-item" onClick={()=>{
+        setWindowState((prev)=>({
+            ...prev,
+             Notes:true,
+        }))
+         setDisplay((prev)=>({
+            ...prev,
+            visible:false,
+        }))
+     }}>New Note</div>
       <div className="menu-item" onClick={()=>{
         setWindowState((prev)=>({
             ...prev,

@@ -1,86 +1,28 @@
 
-export interface Experience {
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  stack: string[];
-  highlights: string[];
-}
 
-export const experiences: Experience[] = [
-  {
-    role: "Senior Full-Stack Developer",
-    company: "Acme Corp",
-    location: "Remote",
-    period: "2022-2026",
-    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "AWS", "Docker", "Terraform"],
-    highlights: [
-      "Designed and shipped microservices handling 5M+ monthly requests",
-      "Implemented end-to-end TypeScript monorepo with shared UI and API types",
-      "Cut CI/CD times by 40% via GitHub Actions, Nx, and incremental builds",
-      "Led migration from REST to GraphQL, reducing overfetching by 30%"
-    ]
-  },
-  {
-    role: "Full-Stack Engineer",
-    company: "Beta Labs",
-    location: "New York, NY",
-    period: "2019-2022",
-    stack: ["Next.js", "TypeScript", "Node.js", "NestJS", "MongoDB", "Redis", "Kubernetes", "GCP"],
-    highlights: [
-      "Built SSR/ISR customer portal with Next.js, improving SEO traffic by 25%",
-      "Auth overhaul with JWT + refresh tokens + RBAC, cutting auth-related tickets by 50%",
-      "Introduced Redis caching, reducing P95 latency from 800ms to 250ms",
-      "Instrumented tracing/metrics with OpenTelemetry and Prometheus/Grafana"
-    ]
-  }
-];
+export const profile = {
+  name: "Arya Chakraborty",
+  role: "Frontend Web Developer",
+  level: "Fresher",
 
+  skills: [
+    "HTML",
+    "CSS / SCSS",
+    "JavaScript",
+    "React"
+    "GSAP",
+    "Lenis",
+    "Locomotive Scroll"
+  ],
 
+  focus: "Freelance Web Development",
 
+  strengths: [
+    "Clean UI",
+    "Responsive Design",
+    "Modern Animations",
+    "Fast Learning"
+  ],
 
-
-
-export interface Experience {
-  role: string;
-  company: string;
-  location: string;
-  period: string;
-  stack: string[];
-  highlights: string[];
-}
-
-export const experiences: Experience[] = [
-  {
-    role: "Senior Full-Stack Developer",
-    company: "Acme Corp",
-    location: "Remote",
-    period: "2022-2026",
-    stack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "AWS", "Docker", "Terraform"],
-    highlights: [
-      "Designed and shipped microservices handling 5M+ monthly requests",
-      "Implemented end-to-end TypeScript monorepo with shared UI and API types",
-      "Cut CI/CD times by 40% via GitHub Actions, Nx, and incremental builds",
-      "Led migration from REST to GraphQL, reducing overfetching by 30%"
-    ]
-  },
-  {
-    role: "Full-Stack Engineer",
-    company: "Beta Labs",
-    location: "New York, NY",
-    period: "2019-2022",
-    stack: ["Next.js", "TypeScript", "Node.js", "NestJS", "MongoDB", "Redis", "Kubernetes", "GCP"],
-    highlights: [
-      "Built SSR/ISR customer portal with Next.js, improving SEO traffic by 25%",
-      "Auth overhaul with JWT + refresh tokens + RBAC, cutting auth-related tickets by 50%",
-      "Introduced Redis caching, reducing P95 latency from 800ms to 250ms",
-      "Instrumented tracing/metrics with OpenTelemetry and Prometheus/Grafana"
-    ]
-  }
-];
-
-
-
-
-
+  availability: "Open for freelance & internships"
+};

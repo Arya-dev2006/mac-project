@@ -49,6 +49,7 @@ const [Display, setDisplay] = useState({
     wallpaper: '/Themes/Goku.png',
     accent: '#30d158',
   },
+  
 ]
 
 useEffect(()=>{
