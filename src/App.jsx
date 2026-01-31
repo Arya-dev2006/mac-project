@@ -30,6 +30,12 @@ const App = () => {
     setDisplay({...Display,visible:false})
   }
 
+const refreshDesktop = () => {
+  setRefreshKey((prev) => prev + 1)
+}
+
+const [refreshKey, setRefreshKey] = useState(0)
+
 const [WindowState, setWindowState] = useState({
   Github:false,
   Notes:false,
@@ -40,13 +46,14 @@ const [WindowState, setWindowState] = useState({
 })
 
   return (
-    <main style={{backgroundImage:`url(${theme.wallpaper})`}}
+    <main  key={refreshKey} className={ refreshKey > 0 ? 'refresh' : ''} style={{backgroundImage:`url(${theme.wallpaper})`}}
     onContextMenu={(e)=>{
       OpenMenu(e);
     }}
     onClick={()=>{
       CloseMenu()
     }}
+   
     >
       <Nav />
       {WindowState.Github &&  <Github setWindowState={setWindowState} WindowName={'Github'} />}
@@ -56,7 +63,7 @@ const [WindowState, setWindowState] = useState({
       {WindowState.Cli&&  <Cli setWindowState={setWindowState} WindowName={'Cli'} />}
       <Button content= {'Change Theme'} />
       <Doc setWindowState={setWindowState}/>
-      <Menu />
+      <Menu setWindowState={setWindowState} refreshDesktop={refreshDesktop} />
     </main>
   )
 }

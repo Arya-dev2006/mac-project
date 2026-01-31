@@ -2,21 +2,40 @@ import React, { useContext } from 'react'
 import { ButtonDataContext } from '../Context/ChangeThemeContext'
 import './Menu.scss'
 
-const Menu = () => {
-    const {Display,setDisplay}= useContext(ButtonDataContext)
+const Menu = ({setWindowState , refreshDesktop}) => {
+    const {NextTheme,Display,setDisplay}= useContext(ButtonDataContext)
     console.log(Display);
     
     if(!Display.visible) return null
     
   return (
    <div className="Menu" style={{ top:Display.y, left:Display.x }}onClick={(e) => e.stopPropagation()}>
-     <div className="menu-item">Change Theme</div>
+     <div className="menu-item" onClick={()=>{
+        NextTheme();
+        setDisplay((prev)=>({
+            ...prev,
+            visible:false,
+        }))
+     }}>Change Theme</div>
       <div className="menu-item">System Preferences</div>
       <div className="divider" />
       <div className="menu-item">New Note</div>
-      <div className="menu-item">Open Terminal</div>
+      <div className="menu-item" onClick={()=>{
+        setWindowState((prev)=>({
+            ...prev,
+             Cli:true,
+        }))
+         setDisplay((prev)=>({
+            ...prev,
+            visible:false,
+        }))
+     }}>Open Terminal</div>
       <div className="divider" />
-      <div className="menu-item">Refresh</div>
+      <div className="menu-item"  onClick={() => {
+    refreshDesktop()
+    setDisplay((prev) => ({ ...prev, visible: false }))
+  }}
+  >Refresh</div>
       <div className="menu-item">About This Mac</div>
    </div>
   )
