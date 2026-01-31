@@ -4,8 +4,10 @@ import './MacWindow.scss'
 import DateTime from '../DateTime'
 import Github from '../Github'
 
-const MacWindow = ({children,width='80vh', height='50vh',left=300,bottom=50,setWindowState,WindowName}) => {
+const MacWindow = ({children,width='80vh', height='50vh',left=300,bottom=50,setWindowState,WindowName,ActiveWindow,setActiveWindow}) => {
     console.log(WindowName)
+    const isActive = ActiveWindow === WindowName
+
   return (
     <Rnd  default={{
        height:height,
@@ -14,9 +16,14 @@ const MacWindow = ({children,width='80vh', height='50vh',left=300,bottom=50,setW
        y:bottom,
 
     }
-     
-    }>
-        <div className="terminal">
+    }
+    style={{
+    zIndex: isActive ? 100 : 10,
+  }}
+  onMouseDown={() => setActiveWindow(WindowName)}
+
+    >
+        <div className={`terminal ${isActive ? 'active' : ''}`} >
         <div className="nav">
             <div className="controls">
                 <div className="red" onClick={()=>{

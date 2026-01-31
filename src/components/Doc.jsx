@@ -1,8 +1,9 @@
 import React from 'react'
 import './Doc.scss'
 import Github from './Github'
+import style from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark'
 
-const Doc = ({setWindowState}) => {
+const Doc = ({setWindowState,setActiveWindow}) => {
   return (
     <footer>
         <div className="Dock">
@@ -16,6 +17,8 @@ const Doc = ({setWindowState}) => {
                   Github:true,
                 };
               })
+              setActiveWindow('Github')
+              
             }}><img src="/Doc-Icons/github.svg" alt="" /></div>
             <div className="Elements" id='link' onClick={()=>{
               window.open('https://www.linkedin.com/in/arya-chakraborty-08b208333/','_Blank')
@@ -30,6 +33,7 @@ const Doc = ({setWindowState}) => {
                   Notes:true,
                 };
               })
+               setActiveWindow('Notes')
             }} ><img src="/Doc-Icons/note.svg" alt="" /></div>
             <div className="Elements" id='pdf' onClick={()=>{
               setWindowState((prev)=>{
@@ -38,6 +42,7 @@ const Doc = ({setWindowState}) => {
                   Resume:true,
                 };
               })
+               setActiveWindow('Resume')
             }} ><img src="/Doc-Icons/pdf.svg" alt="" /></div>
             <div className="Elements" id='cli' onClick={()=>{
               setWindowState((prev)=>{
@@ -46,6 +51,7 @@ const Doc = ({setWindowState}) => {
                   Cli:true,
                 };
               })
+               setActiveWindow('Cli')
             }} ><img src="/Doc-Icons/cli.svg" alt="" /></div>
             <div className="Elements" id='spotify' onClick={()=>{
               setWindowState((prev)=>{
@@ -54,6 +60,7 @@ const Doc = ({setWindowState}) => {
                   Spotify:true,
                 };
               })
+               setActiveWindow('Spotify')
             }} ><img src="/Doc-Icons/spotify.svg" alt="" /></div>
         </div>
     </footer>

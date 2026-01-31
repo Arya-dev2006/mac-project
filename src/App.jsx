@@ -44,7 +44,7 @@ const [WindowState, setWindowState] = useState({
   Cli:false
 
 })
-
+const [ActiveWindow, setActiveWindow] = useState(null)
   return (
     <main  key={refreshKey} className={ refreshKey > 0 ? 'refresh' : ''} style={{backgroundImage:`url(${theme.wallpaper})`}}
     onContextMenu={(e)=>{
@@ -56,13 +56,13 @@ const [WindowState, setWindowState] = useState({
    
     >
       <Nav />
-      {WindowState.Github &&  <Github setWindowState={setWindowState} WindowName={'Github'} />}
-      {WindowState.Notes &&  <Notes setWindowState={setWindowState} WindowName={'Notes'}/>}
-      {WindowState.Resume &&  <Resume setWindowState={setWindowState} WindowName={'Resume'}/>}
-      {WindowState.Spotify &&  <Spotify setWindowState={setWindowState} WindowName={'Spotify'} />}
-      {WindowState.Cli&&  <Cli setWindowState={setWindowState} WindowName={'Cli'} />}
+      {WindowState.Github &&  <Github setWindowState={setWindowState} WindowName={'Github'} ActiveWindow={ActiveWindow} setActiveWindow={setActiveWindow} />}
+      {WindowState.Notes &&  <Notes setWindowState={setWindowState} WindowName={'Notes'}ActiveWindow={ActiveWindow} setActiveWindow={setActiveWindow}/>}
+      {WindowState.Resume &&  <Resume setWindowState={setWindowState} WindowName={'Resume'}ActiveWindow={ActiveWindow} setActiveWindow={setActiveWindow}/>}
+      {WindowState.Spotify &&  <Spotify setWindowState={setWindowState} WindowName={'Spotify'}ActiveWindow={ActiveWindow} setActiveWindow={setActiveWindow} />}
+      {WindowState.Cli&&  <Cli setWindowState={setWindowState} WindowName={'Cli'} ActiveWindow={ActiveWindow} setActiveWindow={setActiveWindow}/>}
       <Button content= {'Change Theme'} />
-      <Doc setWindowState={setWindowState}/>
+      <Doc setWindowState={setWindowState} setActiveWindow={setActiveWindow}/>
       <Menu setWindowState={setWindowState} refreshDesktop={refreshDesktop} />
     </main>
   )
