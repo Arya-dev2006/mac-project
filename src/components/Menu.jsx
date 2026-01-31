@@ -9,7 +9,7 @@ const Menu = () => {
     if(!Display.visible) return null
     
   return (
-   <div className="Menu" style={{ top:Display.y, left:Display.x }}>
+   <div className="Menu" style={{ top:Display.y, left:Display.x }}onClick={(e) => e.stopPropagation()}>
      <div className="menu-item">Change Theme</div>
       <div className="menu-item">System Preferences</div>
       <div className="divider" />
