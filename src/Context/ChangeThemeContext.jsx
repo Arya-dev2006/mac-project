@@ -7,6 +7,12 @@ export const ButtonDataContext = createContext()
  
 const ChangeThemeContext = (props) => {
 
+const [Display, setDisplay] = useState({
+        visible:false,
+        x:0,
+        y:0,
+})
+
     const themes = [
   {
     name: 'Mikasa',
@@ -73,6 +79,8 @@ useEffect(()=>{
     <ButtonDataContext.Provider value={{
         theme:themes[ChangeTheme], //passing the current Theme object
         NextTheme,//passing the NextTheme() function here.
+        Display:Display,
+        setDisplay:setDisplay,
 
     }}>
         {props.children}

@@ -1,0 +1,27 @@
+.Menu {
+  position: fixed;
+  width: 220px;
+  background: rgba(50, 50, 50, 0.36);
+  backdrop-filter: blur(12px);
+  border-radius: 8px;
+  padding: 6px 0;
+  color: #fff;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
+.menu-item {
+  padding: 8px 14px;
+  cursor: default;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 4px 0;
+}

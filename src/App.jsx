@@ -9,12 +9,26 @@ import Cli from './components/Cli'
 import { ButtonDataContext } from './Context/ChangeThemeContext'
 import Button from './components/Button'
 import { useContext } from 'react'
+import Menu from './components/Menu'
 
 const App = () => {
 
   const {theme} = useContext(ButtonDataContext)
+  const {Display,setDisplay}= useContext(ButtonDataContext)
 
-  
+  function OpenMenu(e){
+    e.preventDefault()
+   setDisplay((prev) => ({
+  ...prev,
+  visible: true,
+  x: e.clientX,
+  y: e.clientY,
+  }))
+  }
+
+  function CloseMenu(){
+    setDisplay({...Display,visible:false})
+  }
 
 const [WindowState, setWindowState] = useState({
   Github:false,
@@ -26,7 +40,14 @@ const [WindowState, setWindowState] = useState({
 })
 
   return (
-    <main style={{backgroundImage:`url(${theme.wallpaper})`}}>
+    <main style={{backgroundImage:`url(${theme.wallpaper})`}}
+    onContextMenu={(e)=>{
+      OpenMenu(e);
+    }}
+    onClick={()=>{
+      CloseMenu()
+    }}
+    >
       <Nav />
       {WindowState.Github &&  <Github setWindowState={setWindowState} WindowName={'Github'} />}
       {WindowState.Notes &&  <Notes setWindowState={setWindowState} WindowName={'Notes'}/>}
@@ -35,6 +56,7 @@ const [WindowState, setWindowState] = useState({
       {WindowState.Cli&&  <Cli setWindowState={setWindowState} WindowName={'Cli'} />}
       <Button content= {'Change Theme'} />
       <Doc setWindowState={setWindowState}/>
+      <Menu />
     </main>
   )
 }
