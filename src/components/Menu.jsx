@@ -17,7 +17,7 @@ const Menu = ({setWindowState , refreshDesktop}) => {
             visible:false,
         }))
      }}>Change Theme</div>
-
+    <div className="menu-item">System Preferences</div>
       <div className="divider" />
       <div className="menu-item" onClick={()=>{
         setWindowState((prev)=>({
